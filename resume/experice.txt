@@ -1,82 +1,116 @@
-2016.02-����  ���Ŀ�����Ա SimICT ǧ�����߳�ģ��ƽ̨��973&�˸߻���
-һ����Ŀ����: ���ǧ�����߳�ģ��ƽ̨�������������й��ܺ����ܵ����죬��������ԭ�ͶԱȡ�
-��������ְ������ɽ����
-    1.�Ľ�����mesh �ṹ����Դ����ݡ���ͨ����Ӧ����Ƹ��ܶ�HD-NOC ���ܣ���߲���ִ��Ч�ʡ�
-    2.ʵ��MACT ������ܣ�MACT ��Ը�ͨ��ϸ���ȷô棬ʵ������Ϣ���ռ����ͷŹ��ܣ��������Ч�ʡ�
-    3.����mesh �����ʵ����һ��Ƭ������˫�������ʵ�ֺ�mesh ͬ���Ĺ��ܡ�
-    4.���������磨Booksim���Աȣ���һ���Ľ�mesh �ľ�ȷ�ȣ�ʹ��Ƭ��������ӿ��š�
-    5.��Ա�ģ�ͣ��Ա�ģ������������FPGA �ķ�����ȷ��������10%���ڡ�
+2016.02-至今  核心开发人员 SimICT 千核万线程模拟平台Ⅱ（973&核高基）
+一、项目介绍: 针对千核万线程模拟平台的相关组件，进行功能和性能的延伸，并与现有原型对比。
+二、个人职责及其完成结果：
+    1.改进现有mesh 结构，针对大数据、高通量等应用设计高密度HD-NOC 功能，提高并行执行效率。
+    2.实现MACT 组件功能，MACT 针对高通量细粒度访存，实现了消息的收集和释放功能，提高网络效率。
+    3.根据mesh 组件，实现另一种片上网络双环组件，实现和mesh 同样的功能。
+    4.和现有网络（Booksim）对比，进一步改进mesh 的精确度，使得片上网络更加可信。
+    5.搭建对比模型，对比模拟器和其他组FPGA 的仿真差别，确保精度在10%以内。
 
 
-2015.07 ��2015.12 ���Ŀ�����Ա SimICT ǧ�����߳�ģ��ƽ̨��973&�˸߻���
-һ����Ŀ����: ʵ���ں˴������ṹ��ƣ�ʵ�ִ���������������Core��Cache��NoC��Memory��Mact��HD-NoC��
-Vcore ���������
-��������ְ������ɽ����
-    1.ʵ��Ƭ������NOC ���ܣ�ʵ��router �����������Ӧ���¼����ͣ�ʵ�����ݰ���Ƭ���涴��·�ɷ�ʽ����ͨ�������á�
-    2.���ͬ���ã�4x4��16x16��32x32��Ƭ���������ˣ�ģ�ⲻͬ���������������
-    3.ʵ��ģ�����������������ܣ���������4 �����ˡ�
-    4.ʵ��core ����ķ�֧Ԥ��Ĺ��ܣ�ʹ��core �Է�֧��Ԥ����ȷ�Դﵽ70%���ҡ�
-    5.Ϊ�˼��׸��������һЩ���Թ�������дʵ��CORE �ľ���汾VCORE �����ʵ��trace ע�빦�ܡ�
+2015.07 至2015.12 核心开发人员 SimICT 千核万线程模拟平台Ⅰ（973&核高基）
+一、项目介绍: 实现众核处理器结构设计，实现处理器的相关组件（Core、Cache、NoC、Memory、Mact、HD-NoC、
+Vcore 等组件）。
+二、个人职责及其完成结果：
+    1.实现片上网络NOC 功能，实现router 组件，定义相应的事件类型，实现数据包分片，虫洞的路由方式，虚通道的设置。
+    2.搭建不同配置（4x4、16x16、32x32）片上网络拓扑，模拟不同核数的运行情况。
+    3.实现模拟器拓扑生成器功能，可以生成4 种拓扑。
+    4.实现core 组件的分支预测的功能，使得core 对分支的预测正确性达到70%左右。
+    5.为了简易各个组件的一些测试工作，编写实现CORE 的精简版本VCORE 组件，实现trace 注入功能。
 
-2015.02-2015.04 ���Ŀ�����Ա �����Ϣ�ռ�ϵͳ
-һ����Ŀ���ܣ���ȡһ�������վ��������Ϣ��¼�뵽excel �С�
-��������ְ������ɽ����
-    1.����ϵͳ����ṹ����ƣ�����ģ��Ľ����ӿڡ�
-    2.������ȡ��վ��ͬҳ�����Ϣ���������򹤾߳�ȡ���������û�����Ȥ����Ϣ��
-    3.�����û������û�ɸѡ�����ݣ�������Щ���ݷ��ظ�UI �㡣
+2015.02-2015.04 核心开发人员 足彩信息收集系统
+一、项目介绍：爬取一个足彩网站的数据信息，录入到excel 中。
+二、个人职责及其完成结果：
+    1.负责系统整体结构的设计，各个模块的交互接口。
+    2.负责爬取网站不同页面的信息，利用正则工具抽取、整理出用户感兴趣的信息。
+    3.处理用户请求用户筛选的数据，并把这些数据返回给UI 层。
 
-2014.11-2014.12 ��Ŀ�鳤 ������������ʵ�֣��γ���ҵ��
-һ����Ŀ���ܣ�������ˡ����ס�360 ���������������ţ�ʵ�ּ򵥵���������Ĺ��ܡ�
-��������ְ������ɽ����
-    1. ��������ܹ�����ƣ������ӿڵĶ��ơ�
-    2.�ĵ����зִʣ������ĵ������š����������������û��Ĳ�ѯ��Ϣ��
-    3.���������ģ���ʵ�֣��Լ������ʾ���ղ��ֵ�ʵ��
-
-
-
-
-2016.02-����  ���Ŀ�����Ա SimICT ǧ�����߳�ģ��ƽ̨��973&�˸߻���
-��Ŀ����: ���ǧ�����߳�ģ��ƽ̨�������������й��ܺ����ܵ����죬��������ԭ�ͶԱȡ�
-����ְ������ɽ����
-    1.�Ľ�����mesh �ṹ����Դ����ݡ���ͨ����Ӧ����Ƹ��ܶ�HD-NOC ���ܣ���߲���ִ��Ч�ʡ�
-    2.ʵ��MACT ������ܣ�MACT ��Ը�ͨ��ϸ���ȷô棬ʵ������Ϣ���ռ����ͷŹ��ܣ��������Ч�ʡ�
-    3.����mesh �����ʵ����һ��Ƭ������˫�������ʵ�ֺ�mesh ͬ���Ĺ��ܡ�
-    4.���������磨Booksim���Աȣ���һ���Ľ�mesh �ľ�ȷ�ȣ�ʹ��Ƭ��������ӿ��š�
-    5.��Ա�ģ�ͣ��Ա�ģ������������FPGA �ķ�����ȷ��������10%���ڡ�
-2015.07 ��2015.12 ���Ŀ�����ԱSimICT ǧ�����߳�ģ��ƽ̨��973&�˸߻���
-��Ŀ����: ʵ���ں˴������ṹ��ƣ�ʵ�ִ���������������Core��Cache��NoC��Memory��Mact��HD-NoC��
-Vcore ���������
-����ְ������ɽ����
-    1.ʵ��Ƭ������NOC ���ܣ�ʵ��router �����������Ӧ���¼����ͣ�ʵ�����ݰ���Ƭ���涴��·�ɷ�ʽ����ͨ�������á�
-    2.���ͬ���ã�4x4��16x16��32x32��Ƭ���������ˣ�ģ�ⲻͬ���������������
-    3.ʵ��ģ�����������������ܣ���������4 �����ˡ�
-    4.ʵ��core ����ķ�֧Ԥ��Ĺ��ܣ�ʹ��core �Է�֧��Ԥ����ȷ�Դﵽ70%���ҡ�
-    5.Ϊ�˼��׸��������һЩ���Թ�������дʵ��CORE �ľ���汾VCORE �����ʵ��trace ע�빦�ܡ�
-2015.02-2015.04 ���Ŀ�����Ա �����Ϣ�ռ�ϵͳ
-��Ŀ���ܣ���ȡһ�������վ��������Ϣ��¼�뵽excel �С�
-����ְ������ɽ����
-    1.����ϵͳ����ṹ����ƣ�����ģ��Ľ����ӿڡ�
-    2.������ȡ��վ��ͬҳ�����Ϣ���������򹤾߳�ȡ���������û�����Ȥ����Ϣ��
-    3.�����û������û�ɸѡ�����ݣ�������Щ���ݷ��ظ�UI �㡣
-
-2014.11-2014.12 ��Ŀ�鳤������������ʵ�֣��γ���ҵ��
-��Ŀ���ܣ�������ˡ����ס�360 ���������������ţ�ʵ�ּ򵥵���������Ĺ��ܡ�
-����ְ������ɽ����
-    1. ��������ܹ�����ƣ������ӿڵĶ��ơ�
-    2.�ĵ����зִʣ������ĵ������š����������������û��Ĳ�ѯ��Ϣ��
-    3.���������ģ���ʵ�֣��Լ������ʾ���ղ��ֵ�ʵ��
+2014.11-2014.12 项目组长 简易搜索引擎实现（课程作业）
+一、项目介绍：针对新浪、网易、360 新闻网的体育新闻，实现简单的搜索引擎的功能。
+二、个人职责及其完成结果：
+    1. 搜索引擎架构的设计，各个接口的定制。
+    2.文档进行分词，建立文档的正排、倒排索引，负责用户的查询信息。
+    3.聚类和评分模块的实现，以及结果显示快照部分的实现
 
 
 
-1. ÿ�ܶ�����֯ѧϰ���ۻ���ð༶ÿ�����ܽ᱾�ܵ��ջ������������
-2. ��ѧϰ���ã���������ѧϰ�����ͬѧ�������⣬�������Ǹ��Ͽγ�
-3. �ڿ���֮ǰ����֯��ҽ������帴ϰ��������ҹ�ÿ��֪ʶ��
+
+2016.02-至今  核心开发人员 SimICT 千核万线程模拟平台Ⅱ（973&核高基）
+项目介绍: 针对千核万线程模拟平台的相关组件，进行功能和性能的延伸，并与现有原型对比。
+个人职责及其完成结果：
+    1.改进现有mesh 结构，针对大数据、高通量等应用设计高密度HD-NOC 功能，提高并行执行效率。
+    2.实现MACT 组件功能，MACT 针对高通量细粒度访存，实现了消息的收集和释放功能，提高网络效率。
+    3.根据mesh 组件，实现另一种片上网络双环组件，实现和mesh 同样的功能。
+    4.和现有网络（Booksim）对比，进一步改进mesh 的精确度，使得片上网络更加可信。
+    5.搭建对比模型，对比模拟器和其他组FPGA 的仿真差别，确保精度在10%以内。
+2015.07 至2015.12 核心开发人员SimICT 千核万线程模拟平台Ⅰ（973&核高基）
+项目介绍: 实现众核处理器结构设计，实现处理器的相关组件（Core、Cache、NoC、Memory、Mact、HD-NoC、
+Vcore 等组件）。
+个人职责及其完成结果：
+    1.实现片上网络NOC 功能，实现router 组件，定义相应的事件类型，实现数据包分片，虫洞的路由方式，虚通道的设置。
+    2.搭建不同配置（4x4、16x16、32x32）片上网络拓扑，模拟不同核数的运行情况。
+    3.实现模拟器拓扑生成器功能，可以生成4 种拓扑。
+    4.实现core 组件的分支预测的功能，使得core 对分支的预测正确性达到70%左右。
+    5.为了简易各个组件的一些测试工作，编写实现CORE 的精简版本VCORE 组件，实现trace 注入功能。
+2015.02-2015.04 核心开发人员 足彩信息收集系统
+项目介绍：爬取一个足彩网站的数据信息，录入到excel 中。
+个人职责及其完成结果：
+    1.负责系统整体结构的设计，各个模块的交互接口。
+    2.负责爬取网站不同页面的信息，利用正则工具抽取、整理出用户感兴趣的信息。
+    3.处理用户请求用户筛选的数据，并把这些数据返回给UI 层。
+
+2014.11-2014.12 项目组长简易搜索引擎实现（课程作业）
+项目介绍：针对新浪、网易、360 新闻网的体育新闻，实现简单的搜索引擎的功能。
+个人职责及其完成结果：
+    1. 搜索引擎架构的设计，各个接口的定制。
+    2.文档进行分词，建立文档的正排、倒排索引，负责用户的查询信息。
+    3.聚类和评分模块的实现，以及结果显示快照部分的实现
 
 
-1. ̤ʵ��ѧϰ̬�ȣ��������ϵĹ���������̬�ȡ�
 
-2. ϲ���ŶӺ������ó��Ŷӽ�����
+1. 每周定期组织学习讨论活动，让班级每个人总结本周的收获和遇到的问题
+2. 给学习不好，或者遇到学习问题的同学讲解难题，辅导他们跟上课程
+3. 在考试之前，组织大家进行整体复习，带来大家过每个知识点
 
-3. �Կ����ͣ����¼Ӱ࣬��ѹ����ǿ��
 
-4. ���ڴ��£�ѧϰ����ǿ��
+1. 踏实的学习态度，积极向上的工作和生活态度。
+
+2. 喜欢团队合作，擅长团队交流。
+
+3. 吃苦耐劳，不怕加班，抗压能力强。
+
+4. 乐于创新，学习能力强。
+
+
+2016.2-present SimICT Thousands of Threads and Cores simulation platform StageI(HBN&973) Core Developer
+1.	Project Description: .extend the function and performance of simulation platform,and contrast with existing model
+2.	Personal Responsibilities:
+3.1	Improve mesh network, design High Density NOC for HTC and Big Data Applications
+3.2	Implement MACT component, MACT is designed for HTC’s Fine-grained memory access using message collection and release.
+3.3	According to mesh, implement another Noc Double-Loop architecture.
+3.4	Contrast our mesh with booksim, and improve our mesh accuracy.
+
+
+2015.07-2015.12 Thousands of Threads and cores simulation platform StageII(HBN&973)CoreDesigner/ Developer
+1.	Project Description: Implement Many-Cores  Processor Architecture Including Core、Cache、NoC、Memory、Mact、HD-NoC、Vcore Components.
+2.	Personal Responsibilities:
+3.1	Design router component(transfer data among PEs), realize data packets split, wormhole routing and virtual channel settings.
+3.2	Implement different noc topology configurations to simulate different cores operation.
+3.3	Implement cores branches prediction function, and make the branch prediction accuracy up to 70%.
+3.4	To simplify the debugging and simulation work, implement a lite version of core named vcore(virtual cores)and and implement trace injection function.
+
+
+2015.2-2015.4		The lottery information collection system				Core Designer/ Developer
+1.	Project Description: Crawl a soccer betting website data information typed into excel.
+2.	Personal Responsibilities:
+3.1	Be responsible for the design of the overall structure of the system, and the interaction of each module interface.
+3.2	Be responsible for crawling the information of different pages and use regular to extract and sort out the user interested information.
+3.3	Handling user requests, and returns the data to the UI layer.
+
+
+2014.11-2014.0		Simple search engine implementation				Core Designer/ Developer(Course work)
+1	Project Description: For Sina, NetEase, 360 news sports news, to achieve a simple search engine.
+2	Personal Responsibilities:
+3.1	Be responsible for Search engine architecture design, each interface customization.
+3.2	Be responsible for Document word segmentation, establishment of document inverted index,and processing user's query information.
+3.3	Be responsible for realization of clustering and grading module, and result snapshots.
